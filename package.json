@@ -7,5 +7,7 @@
     "start": "",
     "build": "",
     "test": ""
-  }
+  },
+  "repository": "git@github.com:jalopez13/react-boilerplate.git",
+  "author": "Javier Lopez <javier.lopez@tmz.com>"
 }
