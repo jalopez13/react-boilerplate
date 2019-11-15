@@ -5,7 +5,15 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open --config ./webpack.config.dev.js",
-    "build": "webpack --config ./webpack.config.prod.js"
+    "build": "webpack --config ./webpack.config.prod.js",
+    "test": "jest",
+    "format": "pretty-quick",
+    "lint": "eslint . --ext .jsx --ignore-path .gitignore"
+  },
+  "huskey": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "repository": "git@github.com:jalopez13/react-boilerplate.git",
   "author": "Javier Lopez <javier.lopez@tmz.com>",
@@ -15,11 +23,22 @@
     "@babel/plugin-transform-arrow-functions": "^7.2.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@testing-library/react": "^9.3.2",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "core-js": "3",
     "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jest-dom": "^4.0.0",
     "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
