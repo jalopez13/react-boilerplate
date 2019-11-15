@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-const App = () => (
-  <div className="app-component">
-    <h1>React Rocks!</h1>
-  </div>
-);
+class App extends Component {
+  func = () => console.log('arrow fucntion');
+
+  render() {
+    return (
+      <div className="app-component">
+        <h1>React Rocks!</h1>
+      </div>
+    )
+  }
+}
 
 export default App;

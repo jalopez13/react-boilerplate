@@ -1,13 +1,13 @@
-const path = require('path');
+const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: resolve(__dirname, 'src', 'index.js'),
 
   output: {
     filename: 'main.js',
     publicPath: '/',
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
   },
 
   module: {
@@ -30,9 +30,9 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Reactube",
+      title: "ACHME",
       filename: 'index.html',
-      template: './src/index.html'
+      template: resolve(__dirname, 'src', 'index.html')
     })
   ],
 
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: './dist'
+    contentBase: resolve(__dirname, 'dist')
   } 
 };
