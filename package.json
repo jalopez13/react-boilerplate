@@ -10,9 +10,9 @@
     "format": "pretty-quick",
     "lint": "eslint . --ext .jsx --ignore-path .gitignore"
   },
-  "huskey": {
+  "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn test && yarn lint"
     }
   },
   "repository": "git@github.com:jalopez13/react-boilerplate.git",
