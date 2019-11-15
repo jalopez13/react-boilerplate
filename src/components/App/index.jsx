@@ -4,9 +4,10 @@ class App extends Component {
   func = () => console.log('arrow fucntion');
 
   render() {
+    alert(this.state.count);
     return (
       <div className="app-component">
-        <h1>React Rocks!</h1>
+        Start coding...
       </div>
     )
   }

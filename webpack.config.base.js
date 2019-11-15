@@ -30,7 +30,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "ACHME",
+      title: "Let's get coding!",
       filename: 'index.html',
       template: resolve(__dirname, 'src', 'index.html')
     })
