@@ -15,7 +15,28 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', {
+                targets: [
+                  'last 2 versions', 
+                  'not dead',
+                  'not < 2%',
+                  'not ie 11'
+                ],
+                useBuiltIns: 'entry'
+              }],
+              '@babel/preset-react' 
+            ],
+            plugins: [
+              'babel-plugin-transform-class-properties',
+              '@babel/plugin-transform-arrow-functions',
+              '@babel/plugin-syntax-dynamic-import'
+            ]
+          }
+        }
       },
       {
         test: /\.s[ac]ss$/i,
@@ -30,7 +51,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Let's get coding!",
+      title: 'Start coding mang...',
       filename: 'index.html',
       template: resolve(__dirname, 'src', 'index.html')
     })
