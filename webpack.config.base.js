@@ -1,5 +1,5 @@
-const { resolve } = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: resolve(__dirname, 'src', 'index.js'),
@@ -34,10 +34,13 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      src: resolve(__dirname, 'src')
+    }
   },
 
   devServer: {
     contentBase: resolve(__dirname, 'dist')
   }
-}
+};
