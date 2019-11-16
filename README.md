@@ -2,17 +2,4 @@
 
 #### Description
 
-Add stuff here!
-
-##### Usage
-
-```
-Add inst
-```
-
-Some notes
-
-#### Technology
-
-1. React
-
+Simple React boilerplate for starting new projects.
